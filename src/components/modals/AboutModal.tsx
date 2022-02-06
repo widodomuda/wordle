@@ -14,6 +14,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
           href="https://twitter.com/chasm2018"
           className="underline font-bold"
           target="_blank"
+          rel="noopener"
         >
            chasm2018
         </a>{' '}
@@ -24,6 +25,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
           href="https://github.com/hannahcode/wordle"
           className="underline font-bold"
           target="_blank"
+          rel="noopener"
         >
           view the oiginal code here
         </a>{' '}
@@ -32,6 +34,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
           href="https://www.powerlanguage.co.uk/wordle/"
           className="underline font-bold"
           target="_blank"
+          rel="noopener"
         >
           play the original game here
         </a>
