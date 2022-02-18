@@ -13,18 +13,20 @@ export const isWinningWord = (word: string) => {
 }
 
 export const getWordOfDay = () => {
-  // Game Epoch
-  const epochMs = new Date('January 30, 2022 00:00:00').valueOf()
+  // January 1, 2022 Game Epoch
+  const epochMs = 1641013200000
   const now = Date.now()
   const msInDay = 86400000
-  const index = Math.floor((now - epochMs) / msInDay)
-  const nextday = (index + 1) * msInDay + epochMs
-
+  //const index = Math.floor((now - epochMs) / msInDay)
+  const index = setIdx()
   return {
-    solution: WORDS[index % WORDS.length].toUpperCase(),
+    solution: WORDS[index].toUpperCase(),
     solutionIndex: index,
-    tomorrow: nextday,
   }
 }
 
-export const { solution, solutionIndex, tomorrow } = getWordOfDay()
+export const setIdx = () => {
+  return  Math.floor(Math.random() * (2000 - 0 + 1)) + 0;
+}
+
+export const { solution, solutionIndex } = getWordOfDay()
